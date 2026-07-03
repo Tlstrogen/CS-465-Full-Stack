@@ -43,7 +43,7 @@ const gracefulShutdown = (msg) => {
     });
 };
 
-// Event listeners to process graceful shutdowns
+// Event Listeners to process graceful shutdowns
 
 // Shutdown invoked by nodemon signal
 process.once('SIGUSR2', () => {

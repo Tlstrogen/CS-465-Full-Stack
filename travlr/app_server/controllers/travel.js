@@ -3,15 +3,15 @@ const tripsEndpoint = 'http://localhost:3000/api/trips';
 const options = {
     method: 'GET',
     headers: {
-        'Accept': 'application/json',
-    },
+        'Accept': 'application/json'
+    }
 };
 
 // var fs = require('fs');
 // var trips = JSON.parse(fs.readFileSync('./data/trips.json', 'utf8'));
 
-const travel = async function (req, res, next) {
-    // console.log('TRAVEL CONTROLLER BEGIN');
+/* GET travel view */
+const travel = async function(req, res, next) {
     await fetch(tripsEndpoint, options)
         .then((res) => res.json())
         .then((json) => {
@@ -36,5 +36,5 @@ const travel = async function (req, res, next) {
 };
 
 module.exports = {
-    travel,
+    travel
 };
